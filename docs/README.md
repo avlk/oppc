@@ -8,8 +8,8 @@ Pollen allergy is very common, a lot of people are suffering from it, and when t
 
 Allergic persons closely monitor information sources on pollen content in the air to know when they need to refrain from traveling to the office, wear a mask, or even flee from the pollen to another region. 
 
-In some areas, like in the EU, pollen monitoring is set to a very high standard, with lots of monitoring stations, sometimes automated, sometimes requiring manual labor, providing information to the people. In other areas, actually most of the world, there are no pollen monitoring stations or just several for the area of millions km^2^. This is not enough and therefore there is no information on the pollen - this is what this project will try to change.
+In some areas, like in the EU, pollen monitoring is set to a very high standard, with lots of monitoring stations, sometimes automated, sometimes requiring manual labor, providing information to the people. In other areas, actually most of the world, there are no pollen monitoring stations or just several for the area of millions sq.km. This is not enough and therefore there is no information on the pollen - this is what this project will try to change.
 
-More on the topic is in the [Project Charter](./project_charter.md).
+More on the topic is in the [Project Charter](/project_charter.md).
 
 
