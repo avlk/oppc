@@ -35,7 +35,15 @@ From a _practical_ side, it is already viable to count and distinguish just 2 po
 
 Even in a case where it wouldn't be possible to distinguish Hazelnut and Adler in the early spring (due to their similarity), providing a combined count would deliver a *practical* result: in many regions, these species bloom at the same time and with correlating concentrations, so if you are sensible to any of these, you have to take all your precautions anyway.
 
+### Typical user
+
+A typical user of the device is an allergic person or a member of her family. He may be DIY enthusiast or know someone who is a DIY-er and can assemble and install such a device. The typical user is ready to cover the associated costs of the device and installation since it will not only provide direct value to her or her family by measuring pollen concentrations directly at her house, but also provide value to a greater population of the area.
+
 ### Area coverage
+
+In highly-populated urban areas the goal is to have 2-3 devices installed per 1 Million city, or 5+ devices for a larger city. As there are not so many forests or meadows inside such areas, and the areas are dense, the pollen concentration would be quite similar in a stretch of 10km and more around the place and the data provided by a network of several devices would be already representative.
+
+For rural areas and small towns, the goal is to have at least one device per 100km. This goal is harder to achieve due to a generally lower income and less populational density in such areas. As an upside - these areas are generally covered by the forests and fields of similar types throughout a region, and pollen tends to travel tens and hundreds of kilometers, so the measurement results done 50km from your house may be still very representative.
 
 ### Cost of the device
 
