@@ -6,7 +6,7 @@ A network of pollen-counting devices covering urban and rural areas provides peo
 
 ## High-level definition
 
-- The device runs in an automatic mode. 
+- The device runs in an automatic mode and delivers pollen concentrations to the cloud.
 - It is able to detect pollen particles in the air and distinguish them from non-pollen particles (dust, fiber, etc).
 - It is able to classify pollen into several species and count the concentration of these species in the air.
 - It is typically mounted on an outer wall or an open balcony of a house, and connected to a home electrical supply and WiFi.
@@ -16,15 +16,15 @@ A network of pollen-counting devices covering urban and rural areas provides peo
 
 ### Practical vs. Scientific
 
-*The goal of the project is to deliver practically viable results rather than scientific results. It will trade cost vs. scientific viability to achieve greater coverage while still providing value for the peoples lives.*
+*The goal of the project is to deliver practically viable results rather than scientific results. It will trade cost vs. scientific viability to achieve greater coverage while still providing value for allergic persons.*
 
 Scientific devices usually aim to classify pollen into 20+ species, cost $$$, and require very specific hardware for the automatic measurement. They also have metrologically sound results, although the error could be in the 10% range, which is acceptable.
 
 The most common type of pollen sampling device is a Burkard trap, which draws in the air and the particles drawn are then stuck to a slowly rolling sticky tape. This tape is then inspected by a human operator. This is considered a golden standard and it is able to distinguish a wide variety of pollen species and between pollen and non-pollen particles.
 
-Automated counters tend to challenge the Burkard trap on it's field and provide comparable results. So that they can also be used for science, probably.
+Automated counters tend to challenge the Burkard trap on its field and provide comparable results. So that they can also be used for science, probably.
 
-Automated classification of a pollen is hard, because those particles are very small (between 10-100um, typically 20-50um) and are mostly done with the same material. Therefore, some lasers, optical sensors, and spectrometers are used to provide good live results or the sticky tape method is automated with microscopic cameras. Both methods really challenges the manual counting, but provide too accurate results for quite a big money.
+Automated classification of a pollen is hard because those particles are very small (between 10-100um, typically 20-50um), have shape similarities, and are mostly done with the same material, which makes some species hard to distinguish from others. Therefore, some lasers, optical sensors, and spectrometers are used to provide good live results or the sticky tape method is automated with microscopic cameras. Both methods challenge manual counting but provide too accurate results for quite a large amount of money.
 
 In real life we don't want to classify, e.g. Lily pollen from the Birch pollen, or Rye pollen from the Hazelnut pollen. And here is the difference between a *practical* and a scientific approach.
 
@@ -35,9 +35,9 @@ From a _practical_ side, it is already viable to count and distinguish just 2 po
 
 Even in a case where it wouldn't be possible to distinguish Hazelnut and Adler in the early spring (due to their similarity), providing a combined count would deliver a *practical* result: in many regions, these species bloom at the same time and with correlating concentrations, so if you are sensible to any of these, you have to take all your precautions anyway.
 
-### Cost of the device
-
 ### Area coverage
+
+### Cost of the device
 
 ### Data collection
 
