@@ -20,3 +20,6 @@ the United States](https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2014JD022
 ## Optic measurement methods and apparatus
 1. [Pulsed Operation of High Power Light Emitting Diodes for Flow Velocimetry](https://elib.dlr.de/59034/1/piv09_cwillert_0178.pdf)
 2. [Edgerton, A High-Speed LED Flash](https://td0g.ca/2019/05/14/edgerton-a-high-speed-led-flash-diy/)
+
+## Commercial products
+1. [PollenSense](https://www.pollensense.com/pages/automated-particle-sensors)

@@ -10,6 +10,6 @@ Allergic persons closely monitor information sources on pollen content in the ai
 
 In some areas, like in the EU, pollen monitoring is set to a very high standard, with lots of monitoring stations, sometimes automated, sometimes requiring manual labor, providing information to the people. In other areas, actually most of the world, there are no pollen monitoring stations or just several for the area of millions sq.km. This is not enough and therefore there is no information on the pollen - this is what this project will try to change.
 
-More on the topic is in the [Project Charter](project_charter.md).
+More on the topic is in the [Project Goals](project_goals.md).
 
 
