@@ -7,8 +7,8 @@ A network of pollen-counting devices covering urban and rural areas provides peo
 ## High-level definition
 
 - The device runs in an automatic mode and delivers pollen concentrations to the cloud.
-- It is able to detect pollen particles in the air and distinguish them from non-pollen particles (dust, fiber, etc).
-- It is able to classify pollen into several species and count the concentration of these species in the air.
+- It can detect pollen particles in the air and distinguish them from non-pollen particles (dust, fiber, etc).
+- It can classify pollen into several species and count the concentration of these species in the air.
 - It is typically mounted on an outer wall or an open balcony of a house, and connected to a home electrical supply and WiFi.
 - It is assembled and maintained by an enthusiast user but requires low maintenance once installed.
 
@@ -47,8 +47,32 @@ For rural areas and small towns, the goal is to have at least one device per 100
 
 ### Cost of the device
 
+The cost of the device and installation is planned to be below $2000. It is a high figure, but it creates some headroom for creating a device from good components, allowing less price vs. performance tradeoffs. However, it is much lower than that of commercial devices capable of fully scientific measurements. For 
+
+With a $2000 price tag, this is not going to be a thing everyone buys for fun, but people spend such an amount of money on their hobbies. Drones, cameras, and quad ATVs are bought just for fun in the same price range. Considering the target coverage area and a generally high density of allergic people, there should be a person who can afford such a device for her advantage and the advantage of the people around.
+
 ### Data collection
+
+Data is to be collected in the cloud. Devices are to be managed by IoT service (probably, AWS IoT Core). Collected data from all devices can then be visualized with Grafana.
 
 ### Maintainability
 
+The device should not require daily maintenance.
 
+No commodities should be required that are supplied on a daily, weekly or even monthly basis, like rolls of sticky tape.
+
+The device is going to be maintained by a person with low skills and with simple tools. These skills and tools should be lower than those required to create and assemble the device:
+- Sometimes the device can be ordered from a skilled DIY-er by an enthusiast.
+- This also creates a normal living tempo for any person owning the device, especially in a pollen season.
+
+It is going to require some maintenance 1-3 times per year, with operations like:
+- Replacing 3D-printed pre-made parts, or off-the-shelf parts
+- Cleaning internal structures with wet wipes or compressed air
+
+The whole cycle of maintenance is to be less than 3 hours.
+
+## Objective technical data
+
+- Size of detectable pollen: 20-100um
+- Detectable pollen concentration: 100-10000 per cubic meter
+ 
