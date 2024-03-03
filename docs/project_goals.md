@@ -20,11 +20,11 @@ A network of pollen-counting devices covering urban and rural areas provides peo
 
 Scientific devices usually aim to classify pollen into 20+ species, cost $$$, and require very specific hardware for the automatic measurement. They also have metrologically sound results, although the error could be in the 10% range, which is acceptable.
 
-The most common type of pollen sampling device is a Burkard trap, which draws in the air and the particles drawn are then stuck to a slowly rolling sticky tape. This tape is then inspected by a human operator. This is considered a golden standard and it is able to distinguish a wide variety of pollen species and between pollen and non-pollen particles.
+The most common type of pollen sampling device is a Burkard trap, which draws in the air and the particles drawn are then stuck to a slowly rolling sticky tape. This tape is then inspected by a human operator. This is considered a golden standard and it can distinguish a wide variety of pollen species and between pollen and non-pollen particles.
 
 Automated counters tend to challenge the Burkard trap on its field and provide comparable results. So that they can also be used for science, probably.
 
-Automated classification of a pollen is hard because those particles are very small (between 10-100um, typically 20-50um), have shape similarities, and are mostly done with the same material, which makes some species hard to distinguish from others. Therefore, some lasers, optical sensors, and spectrometers are used to provide good live results or the sticky tape method is automated with microscopic cameras. Both methods challenge manual counting but provide too accurate results for quite a large amount of money.
+Automated classification of pollen is hard because those particles are very small (between 10-100um, typically 20-50um), have shape similarities, and are mostly done with the same material, which makes some species hard to distinguish from others. Therefore, some lasers, optical sensors, and spectrometers are used to provide good live results or the sticky tape method is automated with microscopic cameras. Both methods challenge manual counting but provide too accurate results for quite a large amount of money.
 
 In real life we don't want to classify, e.g. Lily pollen from the Birch pollen, or Rye pollen from the Hazelnut pollen. And here is the difference between a *practical* and a scientific approach.
 
@@ -37,11 +37,11 @@ Even in a case where it wouldn't be possible to distinguish Hazelnut and Adler i
 
 ### Typical user
 
-A typical user of the device is an allergic person or a member of her family. He may be DIY enthusiast or know someone who is a DIY-er and can assemble and install such a device. The typical user is ready to cover the associated costs of the device and installation since it will not only provide direct value to her or her family by measuring pollen concentrations directly at her house, but also provide value to a greater population of the area.
+A typical user of the device is an allergic person or a member of her family. He may be a DIY enthusiast or know someone who is a DIY-er and can assemble and install such a device. The typical user is ready to cover the associated costs of the device and installation since it will not only provide direct value to her or her family by measuring pollen concentrations directly at her house but also provide value to a greater population of the area.
 
 ### Area coverage
 
-In highly-populated urban areas the goal is to have 2-3 devices installed per 1 Million city, or 5+ devices for a larger city. As there are not so many forests or meadows inside such areas, and the areas are dense, the pollen concentration would be quite similar in a stretch of 10km and more around the place and the data provided by a network of several devices would be already representative.
+In highly-populated urban areas, the goal is to have 2-3 devices installed per 1 Million city, or 5+ devices for a larger city. As there are not so many forests or meadows inside such areas, and the areas are dense, the pollen concentration would be quite similar in a stretch of 10km and more around the place and the data provided by a network of several devices would be already representative.
 
 For rural areas and small towns, the goal is to have at least one device per 100km. This goal is harder to achieve due to a generally lower income and less populational density in such areas. As an upside - these areas are generally covered by the forests and fields of similar types throughout a region, and pollen tends to travel tens and hundreds of kilometers, so the measurement results done 50km from your house may be still very representative.
 
@@ -59,7 +59,7 @@ Data is to be collected in the cloud. Devices are to be managed by IoT service (
 
 The device should not require daily maintenance.
 
-No commodities should be required that are supplied on a daily, weekly or even monthly basis, like rolls of sticky tape.
+No commodities should be required that are supplied on a daily, weekly, or even monthly basis, like rolls of sticky tape.
 
 The device is going to be maintained by a person with low skills and with simple tools. These skills and tools should be lower than those required to create and assemble the device:
 - Sometimes the device can be ordered from a skilled DIY-er by an enthusiast.

@@ -10,8 +10,8 @@ Pollen allergy is very common, a lot of people are suffering from it, and when t
 
 Allergic persons closely monitor information sources on pollen content in the air to know when they need to refrain from traveling to the office, wear a mask, or even flee from the pollen to another region. 
 
-In some areas, like in the EU, pollen monitoring is set to a very high standard, with lots of monitoring stations, sometimes automated, sometimes requiring manual labor, providing information to the people. In other areas, actually most of the world, there are no pollen monitoring stations or just several for the area of millions sq.km. This is not enough and therefore there is no information on the pollen - this is what this project will try to change.
+In some areas, like in the EU, pollen monitoring is set to a very high standard, with lots of monitoring stations, sometimes automated, sometimes requiring manual labor, providing information to the people. In other areas, most of the world, there are no pollen monitoring stations or just several for the area of millions of sq. km. This is not enough and therefore there is no information on the pollen - this is what this project will try to change.
 
 More on the high-level goals of the project is in the [Project Goals](project_goals.md).
 
-The counter relies on visible light range optical recognition of pollen grains in the ambient air. This is a non-usual method currently, but it should (if successful) provide for relatively cheap, low-maintenance devices producing practically-feasible data.
+The counter relies on visible light range optical recognition of pollen grains in the ambient air. This is a non-usual method currently, but it should (if successful) provide for relatively cheap, low-maintenance devices producing practically feasible data. More on thin in the [Method description](method.md).
