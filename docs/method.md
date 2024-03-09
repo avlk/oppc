@@ -13,15 +13,29 @@ The simplest way would be just to make a series of photos with equal intervals a
 
 ![Streaming approach](assets/images/method-streaming-approach.png)
 
-In a picture, a laminar airflow is passing with a constant speed, **V**(mm), through the camera **DOF**(mm) - depth of field zone. DOF is illuminated by a powerful light source - it should be powerful enough to keep camera exposure time short. To photograph all passing air we need **FPS**=V/DOF frames per second.
+In a picture, a laminar airflow is passing with a constant speed, **V**(mm), through the camera **DOF**(mm) - depth of field zone. DOF is illuminated by a powerful light source - it should be powerful enough to keep camera exposure time short. To photograph all passing air we will need **FPS**=V/DOF frames per second. 
 
-A camera with sensor size __Xs\*Ys__(mm), pixel pitch **Pp**(um) - pixels are usually rectangular, and sensor resolution __X\*Y__=(Xs\*1000/Pp, Ys\*1000/Pp), needs to see some area across the beam of the light source - camera FOV.
+A camera with sensor size __Xs\*Ys__(mm), pixel pitch **Pp**(um) - pixels are usually rectangular, and sensor resolution __X\*Y__=(Xs\*1000/Pp, Ys\*1000/Pp), needs to see some area across the beam of the light source - camera FOV=HFOV\*VFOV (field of view, mm\*mm).
 
 A lens provides the DOF for the camera at some focusing distance. At a minimal focusing distance, MFD(mm), the lens provides the best magnification, but the smallest FOV.
 
+Then the challenge is that we ideally need a camera with very high resolution in MPix to work continuously at high FPS, using a very fast connection (USB3, or MIPI DSI with 4 lanes), and a lens with the best optical resolution. This is why:
+- The volume processed in one shot will be defined by HFOV\*VFOV\*DOF, and a total airflow would be limited by HFOV\*VFOV\*DOF\*FPS;
+- We need to [process a significant air volume](#processed-air-volume) to count pollen particles at lower concentrations, thus we want to increase either FPV, FOV, or DOF;
+- Increasing FOV means that the area covered by the sensor pixels increases, but it is not that easy as zooming the lens out. We want to see pollen particles as some significant blobs in the picture. Suppose that we'd like to see a 20um pollen grain as an 8-pixel blob, and an 8-MPix camera sensor is 3840 pixels wide. Then our HFOV would cover no more than 20E-3/8\*3840=9.6mm. That's small, and to increase it we can only select more expensive cameras with more megapixels.
+- Increasing DOF generally requires selecting a proper lens, probably with a smaller aperture. Those beasts are not easy to find and there are not so many lenses out there created for this type of job, as we'll later see. So, we'll use whatever we could find and won't have much choice.
+- Increasing FPS is a way to go, but it generally requires fast interfaces. Let's consider [an 8.3MPix IMX334 sensor working a 45FPS](https://docs.baslerweb.com/daa3840-45um), as used in a prototype build: with a resolution of 3840\*2160, 45FPS and 12bits per pixel it requires 3840\*2160\*45\*12=4.478 GBit/s data link, which then is topping a USB3.0 SuperSpeed connection. 
+- In general, increasing FPS and data rate requires more processing power of an embedded computer that is going to pre-process the image flow, but it seems like a lesser problem nowadays.
+
+It is easy to see that the practical limit here is the sensor. As MPix in a sensor is tightly coupled to HFOV\*VFOV, and MPix\*FPS are limited by an obtainable physical connection, the whole system is limited by the amount of airflow it can process with this method.
+
+Another practical limit is the cost - selecting faster cameras and better lenses costs more money and the project is easy to go beyond the target cost, not even speaking of R&D costs (in this case - the money I have to throw to buy test parts and check them out).
+
+To relieve these constraints, [a second method was selected](#shutter-control-approach).
+
 ### Processed air volume
 
-The volume that is processed in a single shot is defined as the camera+lend FOV=HFOV\*VFOV (field of view, mm\*mm) area multiplied by the DOF. As we are going to photograph something small, it is already obvious that the size of a FOV would possibly be in the range of millimeters. The DOF would also be on a millimeter scale (OK, maybe you don't know yet, but we'll see it soon). 
+The volume that is processed in a single shot is defined as the camera+lens FOV=HFOV\*VFOV (field of view, mm\*mm) area multiplied by the DOF. As we are going to photograph something small, it is already obvious that the size of a FOV would possibly be in the range of millimeters. The DOF would also be on a millimeter scale (OK, maybe you don't know yet, but we'll see it soon). 
 
 That's what it practically means: if we have a FOV of, say, 8*\6 mm and a DOF of 2mm, the camera+lens system shoots 8\*6\*2=96 cubic mm. of air in one shot. At 30FPS it will process 30\*96=2880 cubic mm and in one hour - 2880*3600=10.368 million cubic mm, or just 10.368 liters of air - that's only 1% of a cubic meter. We want to [detect between 100 and 10000 particles per cubic meter](project_goals.md#objective-technical-data), and at the lowest concentration, the system would see just one pollen particle in an hour. Rather it would see 24 particles in 24 hours and then we say - yes, the pollen concentration is somewhere around 100/cubic.m. The system would work but would have a very slow response, which is unwanted.
 
@@ -40,13 +54,20 @@ Liters/hour is a major practical design constraint for the system. We would opti
 
 It's still a question if we could ever achieve excellent results.
 
-### Camera resolution and magnification
+## Shutter control approach
 
-We want the picture of any pollen particle to be no less than some **P** pixels in "diameter". That means, that the minimal magnification of the lens+camera system can be defined through the minimal [detectable pollen size](project_goals.md#objective-technical-data), Xpollen(pixels), as **Mmin**=(Xpollen/P)/Pp. 
+We improve on a method by installing 2 reflective particle detectors in a way of airflow.
 
-Let's calculate sample Mmin. At the time of writing the minimal pollen size was 20um. For a pixel pitch of 2um and desirable pollen size of 8x8 pixels, Mmin=(20/8)/2=1.25. 
+![Shutter control approach](assets/images/method-shutter-control-approach.png)
 
-To be continued...
+Here, 2 pairs of reflective sensors are installed in the airflow path. Each sensor consists of a laser source with a line pattern and a photodiode. Line pattern laser source means it projects a line on a surface, but it also means that the laser light passes through a section of an airflow, e.g. it is a plane in the airflow crosssection lit with laser light. Then any pollen particle spotted by this light will reflect some light which is caught by the photosensor. Of course, the light should be very bright and the sensor very sensitive to detect that, because the reflective area of the pollen is very small.
 
+Having two sensors in a row allows to detection of the speed *V* of the airflow. To do this, waveforms from both sensors are correlated. The controller then calculates appropriate times to trigger the flashlight source and the camera shutter to photograph the particle when it approaches the middle of the camera's DOF.
 
+This approach has several advantages:
+- No requirement to photograph the whole airflow as a series of DOF-deep images, this makes our FPS constraint not important. Consider this as having virtually infinite FPS.
+- The camera can be triggered when the particle is exactly in it's focal plane, allowing for the best optical quality.
+- The light source is replaced with a flashlight. Practically it will be an LED source in both cases, but when the LED is operated in a pulsed (flash) mode, it can create pulses of a much brighter light. In addition, when operated in the pulsed mode, the heat the LED produced is times less than in a constant mode. Practically this creates a much more bright source of light with less concerns of overheating.
 
+This is the approach used in _oppc_ currently.
+ 
