@@ -66,8 +66,7 @@ Having two sensors in a row allows to detection of the speed *V* of the airflow.
 
 This approach has several advantages:
 - No requirement to photograph the whole airflow as a series of DOF-deep images, this makes our FPS constraint not important. Consider this as having virtually infinite FPS.
-- The camera can be triggered when the particle is exactly in it's focal plane, allowing for the best optical quality.
-- The light source is replaced with a flashlight. Practically it will be an LED source in both cases, but when the LED is operated in a pulsed (flash) mode, it can create pulses of a much brighter light. In addition, when operated in the pulsed mode, the heat the LED produced is times less than in a constant mode. Practically this creates a much more bright source of light with less concerns of overheating.
+- The camera can be triggered when the particle is exactly in its focal plane, allowing for the best optical quality.
+- The light source is replaced with a flashlight. Practically it will be an LED source in both cases, but when the LED is operated in a pulsed (flash) mode, it can create pulses of a much brighter light. In addition, when operated in the pulsed mode, the heat the LED produces is times less than in a constant mode. Practically this creates a much more bright source of light with fewer concerns of overheating.
 
-This is the approach used in _oppc_ currently.
- 
+This is the approach used in _OPPC_ currently.
