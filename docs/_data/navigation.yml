@@ -1,0 +1,9 @@
+main:
+  - title: "Project goals"
+    url: /project_goals.md
+  - title: "Method"
+    url: /method.md
+  - title: "Blog"
+    url: /blog
+  - title: "References"
+    url: /references.md
